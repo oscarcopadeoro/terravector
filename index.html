@@ -188,8 +188,8 @@
 
   <div class="lang-bar">
     <span>Idioma:</span>
-    <button class="lang-btn active" id="btn-es" onclick="setLang('es')">Espanol</button>
-    <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+    <button class="lang-btn active" id="btn-es" >Espanol</button>
+    <button class="lang-btn" id="btn-en" >English</button>
   </div>
 
   <!-- HERO -->
@@ -411,7 +411,7 @@
           <div id="cinfo-es">
             <h4>Informacion de Contacto</h4>
             <div class="contact-item"><span class="c-icon">&#128241;</span><span>WhatsApp: +52 (55) XXX-XXXX</span></div>
-            <div class="contact-item"><span class="c-icon">&#128231;</span><span>correo@tudominio.com</span></div>
+            <div class="contact-item"><span class="c-icon">&#128231;</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="45262a3737202a053130212a282c2b2c2a6b262a28">[email&#160;protected]</a></span></div>
             <div class="contact-item"><span class="c-icon">&#128205;</span><span>Oaxtepec, Morelos y San Andres Huayapam, Oaxaca</span></div>
             <div class="contact-item"><span class="c-icon">&#128336;</span><span>Lunes a Sabado 9am - 7pm</span></div>
             <div class="contact-item"><span class="c-icon">&#127482;&#127480;</span><span>We speak English. International buyers welcome.</span></div>
@@ -419,7 +419,7 @@
           <div id="cinfo-en" class="hidden">
             <h4>Contact Information</h4>
             <div class="contact-item"><span class="c-icon">&#128241;</span><span>WhatsApp: +52 (55) XXX-XXXX</span></div>
-            <div class="contact-item"><span class="c-icon">&#128231;</span><span>info@yourdomain.com</span></div>
+            <div class="contact-item"><span class="c-icon">&#128231;</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="741d1a121b340d1b0106101b19151d1a5a171b19">[email&#160;protected]</a></span></div>
             <div class="contact-item"><span class="c-icon">&#128205;</span><span>Oaxtepec, Morelos and San Andres Huayapam, Oaxaca</span></div>
             <div class="contact-item"><span class="c-icon">&#128336;</span><span>Monday to Saturday 9am - 7pm CST</span></div>
             <div class="contact-item"><span class="c-icon">&#127474;&#127485;</span><span>Hablamos espanol. Compradores nacionales bienvenidos.</span></div>
@@ -436,7 +436,7 @@
             <option value="ambos">Ambos / Both</option>
           </select>
           <textarea id="fmsg" placeholder="Mensaje / Message..."></textarea>
-          <button type="button" class="btn-send" onclick="sendForm()">
+          <button type="button" class="btn-send" id='send-btn'>
             <span id="sendbtn-es">Enviar Mensaje</span>
             <span id="sendbtn-en" class="hidden">Send Message</span>
           </button>
@@ -460,7 +460,50 @@
     </svg>
   </a>
 
-  <script type="text/javascript">
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var currentLang = 'es';
+  var esIds = ['hero-es','prop-header-es','card1-es','card2-es','spec1-es','spec2-es','price1-es','price2-es','deed1-es','deed2-es','cta1-es','cta2-es','gal-es','galnote-es','why-header-es','why1-es','why2-es','why3-es','why4-es','why5-es','why6-es','contact-header-es','cinfo-es','sendbtn-es','footer-es'];
+  var enIds = ['hero-en','prop-header-en','card1-en','card2-en','spec1-en','spec2-en','price1-en','price2-en','deed1-en','deed2-en','cta1-en','cta2-en','gal-en','galnote-en','why-header-en','why1-en','why2-en','why3-en','why4-en','why5-en','why6-en','contact-header-en','cinfo-en','sendbtn-en','footer-en'];
+
+  function setLang(lang) {
+    currentLang = lang;
+    var show = lang === 'es' ? esIds : enIds;
+    var hide = lang === 'es' ? enIds : esIds;
+    var i, el;
+    for (i = 0; i < show.length; i++) {
+      el = document.getElementById(show[i]);
+      if (el) el.className = el.className.replace(/\bhidden\b/g, '').trim();
+    }
+    for (i = 0; i < hide.length; i++) {
+      el = document.getElementById(hide[i]);
+      if (el && el.className.indexOf('hidden') === -1) el.className += ' hidden';
+    }
+    document.getElementById('btn-es').className = lang === 'es' ? 'lang-btn active' : 'lang-btn';
+    document.getElementById('btn-en').className = lang === 'en' ? 'lang-btn active' : 'lang-btn';
+  }
+
+  document.getElementById('btn-es').addEventListener('click', function() { setLang('es'); });
+  document.getElementById('btn-en').addEventListener('click', function() { setLang('en'); });
+
+  var sendBtn = document.getElementById('send-btn');
+  if (sendBtn) {
+    sendBtn.addEventListener('click', function() {
+      var name = document.getElementById('fname').value || '';
+      var prop = document.getElementById('fprop').value || '';
+      var msg = document.getElementById('fmsg').value || '';
+      var phone = document.getElementById('fphone').value || '';
+      var text = currentLang === 'es'
+        ? 'Hola, soy ' + name + '. Me interesa el terreno en ' + prop + '. ' + msg + ' Tel: ' + phone
+        : 'Hi, I am ' + name + '. Interested in land at ' + prop + '. ' + msg + ' Phone: ' + phone;
+      window.open('https://wa.me/5255XXXXXXXX?text=' + encodeURIComponent(text), '_blank');
+    });
+  }
+
+  var ul = navigator.language || navigator.userLanguage || 'es';
+  if (ul.toLowerCase().indexOf('en') === 0) { setLang('en'); }
+});
+</script><script type="text/javascript">
   //<![CDATA[
     var currentLang = 'es';
 
@@ -532,14 +575,4 @@
       var phone = document.getElementById('fphone').value || '';
       var text;
       if (currentLang === 'es') {
-        text = 'Hola, soy ' + name + '. Me interesa el terreno en ' + prop + '. ' + (msg ? 'Mensaje: ' + msg : '') + ' Tel: ' + phone;
-      } else {
-        text = 'Hi, I am ' + name + '. I am interested in the land in ' + prop + '. ' + (msg ? 'Message: ' + msg : '') + ' Phone: ' + phone;
-      }
-      window.open('https://wa.me/5255XXXXXXXX?text=' + encodeURIComponent(text), '_blank');
-    }
-  //]]>
-  </script>
-
-</body>
-</html>
+        text = 'Hola, soy ' + name + '. Me interesa el terreno en ' + prop + '. '

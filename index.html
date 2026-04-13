@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terrenos en Venta | Land for Sale - Oaxtepec y Oaxaca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet" type="text/css"/>
+  <style type="text/css">
+    :root {
+      --tierra: #8B5E3C;
+      --verde: #3A6B35;
+      --dorado: #C9A84C;
+      --crema: #F5EFE0;
+      --oscuro: #1C1C1C;
+      --gris: #6B6B6B;
+      --blanco: #FFFFFF;
+    }
+    *, *:before, *:after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Jost', sans-serif; background: #F5EFE0; color: #1C1C1C; overflow-x: hidden; }
+
+    .lang-bar {
+      position: fixed; top: 0; right: 0; left: 0; z-index: 1000;
+      display: flex; justify-content: flex-end; align-items: center;
+      padding: 10px 24px; background: rgba(28,28,28,0.92);
+      backdrop-filter: blur(8px); gap: 8px;
+    }
+    .lang-bar span { color: #aaa; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-right: 6px; }
+    .lang-btn {
+      padding: 5px 16px; border-radius: 20px; border: 1px solid #555;
+      background: transparent; color: #ddd; font-size: 12px;
+      font-family: 'Jost', sans-serif; letter-spacing: 1px; cursor: pointer; transition: all 0.25s;
+    }
+    .lang-btn.active, .lang-btn:hover { background: #C9A84C; border-color: #C9A84C; color: #1C1C1C; }
+
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      align-items: center; text-align: center; padding: 100px 24px 60px; overflow: hidden;
+      background: linear-gradient(160deg, rgba(58,107,53,0.55) 0%, rgba(139,94,60,0.65) 100%),
+        url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=1600&amp;q=80') center/cover no-repeat;
+    }
+    .hero:after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 120px; background: linear-gradient(to bottom, transparent, #F5EFE0);
+    }
+    .hero-badge {
+      display: inline-block; background: #C9A84C; color: #1C1C1C;
+      font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+      padding: 7px 20px; border-radius: 20px; margin-bottom: 28px;
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif; font-size: 4.5rem; font-weight: 900;
+      color: #FFFFFF; line-height: 1.08; max-width: 850px; animation: fadeUp 0.9s 0.1s ease both;
+    }
+    .hero h1 em { color: #C9A84C; font-style: normal; }
+    .hero p.sub {
+      margin-top: 22px; font-size: 1.15rem; color: rgba(255,255,255,0.88);
+      max-width: 560px; font-weight: 300; line-height: 1.7; animation: fadeUp 1s 0.2s ease both;
+    }
+    .hero-cta {
+      margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap;
+      justify-content: center; animation: fadeUp 1s 0.3s ease both; position: relative; z-index: 2;
+    }
+    .btn-primary {
+      padding: 16px 36px; background: #C9A84C; color: #1C1C1C; border: none;
+      border-radius: 4px; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 600;
+      letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer;
+      text-decoration: none; display: inline-block; transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,168,76,0.5); }
+    .btn-outline {
+      padding: 16px 36px; background: transparent; color: #FFFFFF;
+      border: 1.5px solid rgba(255,255,255,0.7); border-radius: 4px;
+      font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500;
+      letter-spacing: 1.5px; text-transform: uppercase; cursor: pointer;
+      text-decoration: none; display: inline-block; transition: all 0.2s;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    section { padding: 80px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; font-weight: 600; margin-bottom: 12px; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; line-height: 1.15; color: #1C1C1C; margin-bottom: 16px; }
+    .section-sub { color: #6B6B6B; font-size: 1.05rem; max-width: 600px; line-height: 1.8; }
+    .divider { width: 48px; height: 3px; background: #C9A84C; margin: 20px 0; }
+
+    #propiedades { background: #FFFFFF; }
+    .props-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; margin-top: 48px; }
+    .prop-card { border-radius: 8px; overflow: hidden; box-shadow: 0 4px 30px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; background: #FFFFFF; }
+    .prop-card:hover { transform: translateY(-6px); box-shadow: 0 16px 50px rgba(0,0,0,0.14); }
+    .prop-img { position: relative; height: 240px; background: #ccc center/cover no-repeat; overflow: hidden; }
+    .prop-img.oaxtepec { background-image: url('https://images.unsplash.com/photo-1625046869958-3a3e1a2badf5?w=800&amp;q=80'); }
+    .prop-img.oaxaca { background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&amp;q=80'); }
+    .prop-tag { position: absolute; top: 16px; left: 16px; background: #3A6B35; color: white; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 5px 12px; border-radius: 3px; }
+    .prop-tag.oax { background: #8B5E3C; }
+    .prop-body { padding: 28px; }
+    .prop-body h3 { font-family: 'Playfair Display', serif; font-size: 1.45rem; color: #1C1C1C; margin-bottom: 10px; }
+    .prop-body p { color: #6B6B6B; line-height: 1.7; font-size: 0.95rem; margin-bottom: 20px; }
+    .prop-specs { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 22px; }
+    .spec { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #1C1C1C; font-weight: 500; }
+    .prop-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 18px; border-top: 1px solid #eee; }
+    .prop-price { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #3A6B35; font-weight: 700; }
+    .prop-price small { font-family: 'Jost', sans-serif; font-size: 12px; color: #6B6B6B; font-weight: 400; display: block; }
+    .btn-sm { padding: 9px 20px; background: #1C1C1C; color: white; border: none; border-radius: 4px; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
+    .btn-sm:hover { background: #3A6B35; }
+
+    #galeria { background: #1C1C1C; }
+    #galeria .section-title { color: #FFFFFF; }
+    #galeria .section-sub { color: #aaa; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 40px; }
+    .g-item { border-radius: 4px; overflow: hidden; aspect-ratio: 4/3; background: #333 center/cover no-repeat; transition: opacity 0.3s; }
+    .g-item:hover { opacity: 0.8; }
+    .g-item.big { grid-column: span 2; aspect-ratio: 16/7; }
+    .g1 { background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&amp;q=80'); }
+    .g2 { background-image: url('https://images.unsplash.com/photo-1604537529428-15bcbeecfe4d?w=600&amp;q=80'); }
+    .g3 { background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&amp;q=80'); }
+    .g4 { background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=600&amp;q=80'); }
+    .g5 { background-image: url('https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&amp;q=80'); }
+    .gallery-note { text-align: center; margin-top: 18px; font-size: 13px; color: #666; font-style: italic; }
+
+    #porque { background: #F5EFE0; }
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; margin-top: 48px; }
+    .why-card { padding: 32px 24px; background: white; border-radius: 6px; border-left: 4px solid #C9A84C; transition: transform 0.2s; }
+    .why-card:hover { transform: translateY(-4px); }
+    .why-icon { font-size: 2rem; margin-bottom: 14px; }
+    .why-card h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 10px; color: #1C1C1C; }
+    .why-card p { font-size: 0.92rem; color: #6B6B6B; line-height: 1.7; }
+
+    #contacto { background: #3A6B35; }
+    #contacto .section-label { color: #C9A84C; }
+    #contacto .section-title { color: white; }
+    #contacto .section-sub { color: rgba(255,255,255,0.8); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 48px; }
+    .contact-info { color: white; }
+    .contact-info h4 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 24px; color: #C9A84C; }
+    .contact-item { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.6; }
+    .c-icon { font-size: 1.3rem; margin-top: 2px; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      padding: 14px 16px; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;
+      font-family: 'Jost', sans-serif; font-size: 14px;
+      background: rgba(255,255,255,0.12); color: white; outline: none; transition: background 0.2s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { background: rgba(255,255,255,0.2); }
+    .contact-form select option { background: #3A6B35; }
+    .contact-form textarea { min-height: 120px; resize: vertical; }
+    .btn-send {
+      padding: 16px; background: #C9A84C; color: #1C1C1C; border: none; border-radius: 4px;
+      font-family: 'Jost', sans-serif; font-weight: 700; font-size: 13px;
+      letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: opacity 0.2s;
+    }
+    .btn-send:hover { opacity: 0.88; }
+
+    footer { background: #1C1C1C; color: #888; text-align: center; padding: 30px 24px; font-size: 13px; line-height: 1.9; }
+    footer strong { color: #C9A84C; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hidden { display: none; }
+    .wafab {
+      position: fixed; bottom: 28px; right: 28px; width: 58px; height: 58px;
+      background: #25D366; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; box-shadow: 0 6px 20px rgba(37,211,102,0.45);
+      z-index: 999; text-decoration: none; transition: transform 0.2s;
+    }
+    .wafab:hover { transform: scale(1.1); }
+    .wafab svg { width: 30px; height: 30px; fill: white; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.6rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .g-item.big { grid-column: span 2; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .g-item.big { grid-column: span 1; }
+    }
+  
+.fbfab {
+  position: fixed; bottom: 24px; right: 96px; width: 56px; height: 56px;
+  background: #1877F2; border-radius: 50%; display: flex; align-items: center;
+  justify-content: center; box-shadow: 0 4px 16px rgba(24,119,242,0.5);
+  z-index: 999; text-decoration: none; transition: transform 0.2s;
+}
+.fbfab:hover { transform: scale(1.1); }
+.fbfab svg { width: 26px; height: 26px; fill: white; }
+
+</style>
+</head>
+<body>
+
+  <div class="lang-bar">
+    <span>Idioma:</span>
+    <button class="lang-btn active" id="btn-es" >Espanol</button>
+    <button class="lang-btn" id="btn-en" >English</button>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div id="hero-es">
+      <div class="hero-badge">Inversion en Bienes Raices - Mexico</div>
+      <h1>Terrenos en <em>Lugares Unicos</em> de Mexico</h1>
+      <p class="sub">Oaxtepec, Morelos &amp; San Andres Huayapam, Oaxaca<br/>Predios con escrituras, vistas privilegiadas y gran potencial de inversion.</p>
+      <div class="hero-cta">
+        <a href="#propiedades" class="btn-primary">Ver Terrenos</a>
+        <a href="#contacto" class="btn-outline">Contactar Asesor</a>
+      </div>
+    </div>
+    <div id="hero-en" class="hidden">
+      <div class="hero-badge">Real Estate Investment - Mexico</div>
+      <h1>Land for Sale in <em>Unique Destinations</em></h1>
+      <p class="sub">Oaxtepec, Morelos &amp; San Andres Huayapam, Oaxaca<br/>Titled properties with stunning views and outstanding investment potential.</p>
+      <div class="hero-cta">
+        <a href="#propiedades" class="btn-primary">View Properties</a>
+        <a href="#contacto" class="btn-outline">Contact an Advisor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPIEDADES -->
+  <section id="propiedades">
+    <div class="container">
+      <div id="prop-header-es">
+        <p class="section-label">Nuestras Propiedades</p>
+        <h2 class="section-title">Terrenos Disponibles</h2>
+        <div class="divider"></div>
+        <p class="section-sub">Cada predio cuenta con documentacion en regla, acceso a servicios y un entorno natural inigualable.</p>
+      </div>
+      <div id="prop-header-en" class="hidden">
+        <p class="section-label">Our Properties</p>
+        <h2 class="section-title">Available Land Lots</h2>
+        <div class="divider"></div>
+        <p class="section-sub">Each property has full legal documentation, access to services, and an unmatched natural setting.</p>
+      </div>
+
+      <div class="props-grid">
+        <!-- OAXTEPEC -->
+        <div class="prop-card">
+          <div class="prop-img oaxtepec">
+            <span class="prop-tag">Oaxtepec, Morelos</span>
+          </div>
+          <div class="prop-body">
+            <div id="card1-es">
+              <h3>Terreno en Oaxtepec</h3>
+              <p>Predio ubicado en Oaxtepec, Morelos. Zona de clima calido, ideal para residencia vacacional o desarrollo turistico. A minutos de parques acuaticos y centros de convenciones.</p>
+            </div>
+            <div id="card1-en" class="hidden">
+              <h3>Land in Oaxtepec</h3>
+              <p>Property located in Oaxtepec, Morelos. Warm climate area, ideal for vacation homes or tourist development. Minutes from water parks and convention centers.</p>
+            </div>
+            <div class="prop-specs">
+              <div class="spec">
+                <svg width="16" height="16" fill="none" stroke="#C9A84C" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="1"/></svg>
+                <span id="spec1-es">Consultar m2</span>
+                <span id="spec1-en" class="hidden">Ask for size</span>
+              </div>
+              <div class="spec">
+                <svg width="16" height="16" fill="none" stroke="#C9A84C" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Morelos, MX</span>
+              </div>
+            </div>
+            <div class="prop-footer">
+              <div class="prop-price">
+                <span id="price1-es">Precio a consultar</span>
+                <span id="price1-en" class="hidden">Price on request</span>
+                <small id="deed1-es">Escrituras disponibles</small>
+                <small id="deed1-en" class="hidden">Title deeds available</small>
+              </div>
+              <a href="#contacto" class="btn-sm">
+                <span id="cta1-es">Informes</span>
+                <span id="cta1-en" class="hidden">Inquire</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- OAXACA -->
+        <div class="prop-card">
+          <div class="prop-img oaxaca">
+            <span class="prop-tag oax">San Andres Huayapam, Oax.</span>
+          </div>
+          <div class="prop-body">
+            <div id="card2-es">
+              <h3>Terreno en Huayapam, Oaxaca</h3>
+              <p>Predios en San Andres Huayapam, a minutos de la ciudad de Oaxaca. Vista a las montanas, tranquilidad y gran plusvalia. Ideal para retiro, ecoturismo o inversion.</p>
+            </div>
+            <div id="card2-en" class="hidden">
+              <h3>Land in Huayapam, Oaxaca</h3>
+              <p>Lots in San Andres Huayapam, minutes from Oaxaca City. Mountain views, peaceful surroundings, and high appreciation potential. Ideal for retreat, eco-tourism, or investment.</p>
+            </div>
+            <div class="prop-specs">
+              <div class="spec">
+                <svg width="16" height="16" fill="none" stroke="#C9A84C" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="1"/></svg>
+                <span id="spec2-es">Consultar m2</span>
+                <span id="spec2-en" class="hidden">Ask for size</span>
+              </div>
+              <div class="spec">
+                <svg width="16" height="16" fill="none" stroke="#C9A84C" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Oaxaca, MX</span>
+              </div>
+            </div>
+            <div class="prop-footer">
+              <div class="prop-price">
+                <span id="price2-es">Precio a consultar</span>
+                <span id="price2-en" class="hidden">Price on request</span>
+                <small id="deed2-es">Escrituras disponibles</small>
+                <small id="deed2-en" class="hidden">Title deeds available</small>
+              </div>
+              <a href="#contacto" class="btn-sm">
+                <span id="cta2-es">Informes</span>
+                <span id="cta2-en" class="hidden">Inquire</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="container">
+      <div id="gal-es">
+        <p class="section-label">Fotografia Aerea</p>
+        <h2 class="section-title" style="color:#FFFFFF;">Vistas de los Predios</h2>
+        <div class="divider"></div>
+        <p class="section-sub" style="color:#aaa;">Imagenes aereas reales de nuestros terrenos. Conoce el entorno, los accesos y el paisaje.</p>
+      </div>
+      <div id="gal-en" class="hidden">
+        <p class="section-label">Aerial Photography</p>
+        <h2 class="section-title" style="color:#FFFFFF;">Property Views</h2>
+        <div class="divider"></div>
+        <p class="section-sub" style="color:#aaa;">Real aerial images of our land lots. Discover the surroundings, access roads, and breathtaking landscape.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="g-item big g1"></div>
+        <div class="g-item g2"></div>
+        <div class="g-item g3"></div>
+        <div class="g-item g4"></div>
+        <div class="g-item g5"></div>
+      </div>
+      <p class="gallery-note">
+        <span id="galnote-es">Reemplaza estas imagenes con tus fotos aereas reales de los predios</span>
+        <span id="galnote-en" class="hidden">Replace these with your real aerial photos of the properties</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- POR QUE -->
+  <section id="porque">
+    <div class="container">
+      <div id="why-header-es">
+        <p class="section-label">Por que invertir?</p>
+        <h2 class="section-title">Razones para Elegir Nuestros Terrenos</h2>
+        <div class="divider"></div>
+      </div>
+      <div id="why-header-en" class="hidden">
+        <p class="section-label">Why Invest?</p>
+        <h2 class="section-title">Reasons to Choose Our Land</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">&#128220;</div>
+          <div id="why1-es"><h4>Escrituras en Regla</h4><p>Todos los terrenos cuentan con documentacion legal completa y libre de gravamenes.</p></div>
+          <div id="why1-en" class="hidden"><h4>Clean Title Deeds</h4><p>All properties have full legal documentation and are free of encumbrances.</p></div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#128200;</div>
+          <div id="why2-es"><h4>Alta Plusvalia</h4><p>Zonas con creciente demanda turistica y residencial. Tu inversion se valoriza con el tiempo.</p></div>
+          <div id="why2-en" class="hidden"><h4>High Appreciation</h4><p>Areas with growing tourist and residential demand. Your investment grows in value over time.</p></div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#127807;</div>
+          <div id="why3-es"><h4>Naturaleza y Tranquilidad</h4><p>Entornos naturales privilegiados, lejos del caos urbano pero cerca de servicios esenciales.</p></div>
+          <div id="why3-en" class="hidden"><h4>Nature and Tranquility</h4><p>Privileged natural settings, away from urban chaos but close to essential services.</p></div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#127758;</div>
+          <div id="why4-es"><h4>Destinos Turisticos</h4><p>Oaxtepec y Oaxaca son destinos internacionales con flujo turistico constante todo el ano.</p></div>
+          <div id="why4-en" class="hidden"><h4>Tourist Destinations</h4><p>Oaxtepec and Oaxaca are international destinations with constant year-round tourism.</p></div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#129309;</div>
+          <div id="why5-es"><h4>Asesoria Personalizada</h4><p>Te acompanamos durante todo el proceso de compra, desde la visita hasta la firma ante notario.</p></div>
+          <div id="why5-en" class="hidden"><h4>Personalized Guidance</h4><p>We accompany you through the entire purchase process, from site visit to notary signing.</p></div>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">&#128181;</div>
+          <div id="why6-es"><h4>Facilidades de Pago</h4><p>Consulta nuestros esquemas de financiamiento adaptados a compradores nacionales e internacionales.</p></div>
+          <div id="why6-en" class="hidden"><h4>Payment Options</h4><p>Ask about our flexible financing plans designed for both national and international buyers.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <div id="contact-header-es">
+        <p class="section-label">Contactanos</p>
+        <h2 class="section-title">Listo para Invertir?</h2>
+        <div class="divider"></div>
+        <p class="section-sub">Escribenos y un asesor te contactara a la brevedad con toda la informacion que necesitas.</p>
+      </div>
+      <div id="contact-header-en" class="hidden">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Ready to Invest?</h2>
+        <div class="divider"></div>
+        <p class="section-sub">Send us a message and an advisor will reach out shortly with all the information you need.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div id="cinfo-es">
+            <h4>Informacion de Contacto</h4>
+            <div class="contact-item"><span class="c-icon">&#128241;</span><span>WhatsApp: +52 331 556 2728</span></div>
+            <div class="contact-item"><span class="c-icon">&#128231;</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="45262a3737202a053130212a282c2b2c2a6b262a28">[email&#160;protected]</a></span></div>
+            <div class="contact-item"><span class="c-icon">&#128205;</span><span>Oaxtepec, Morelos y San Andres Huayapam, Oaxaca</span></div>
+            <div class="contact-item"><span class="c-icon">&#128336;</span><span>Lunes a Sabado 9am - 7pm</span></div>
+            <div class="contact-item"><span class="c-icon">&#127482;&#127480;</span><span>We speak English. International buyers welcome.</span></div>
+          <div class="contact-item"><span class="c-icon">&#128178;</span><span><a href="https://www.facebook.com/profile.php?id=61552757540126" target="_blank" style="color:white">Facebook: Terrenos Oaxtepec y Oaxaca</a></span></div>
+          </div>
+          <div id="cinfo-en" class="hidden">
+            <h4>Contact Information</h4>
+            <div class="contact-item"><span class="c-icon">&#128241;</span><span>WhatsApp: +52 331 556 2728</span></div>
+            <div class="contact-item"><span class="c-icon">&#128231;</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="741d1a121b340d1b0106101b19151d1a5a171b19">[email&#160;protected]</a></span></div>
+            <div class="contact-item"><span class="c-icon">&#128205;</span><span>Oaxtepec, Morelos and San Andres Huayapam, Oaxaca</span></div>
+            <div class="contact-item"><span class="c-icon">&#128336;</span><span>Monday to Saturday 9am - 7pm CST</span></div>
+            <div class="contact-item"><span class="c-icon">&#127474;&#127485;</span><span>Hablamos espanol. Compradores nacionales bienvenidos.</span></div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <input type="text" id="fname" placeholder="Nombre / Name"/>
+          <input type="email" id="femail" placeholder="Email"/>
+          <input type="tel" id="fphone" placeholder="WhatsApp / Phone"/>
+          <select id="fprop">
+            <option value="" disabled="disabled" selected="selected">Selecciona / Select property...</option>
+            <option value="oaxtepec">Oaxtepec, Morelos</option>
+            <option value="oaxaca">San Andres Huayapam, Oaxaca</option>
+            <option value="ambos">Ambos / Both</option>
+          </select>
+          <textarea id="fmsg" placeholder="Mensaje / Message..."></textarea>
+          <button type="button" class="btn-send" id='send-btn'>
+            <span id="sendbtn-es">Enviar Mensaje</span>
+            <span id="sendbtn-en" class="hidden">Send Message</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Terrenos Oaxtepec y Oaxaca</strong></p>
+    <p>Oaxtepec, Morelos | San Andres Huayapam, Oaxaca | Mexico</p>
+    <p style="margin-top:8px;font-size:11px;color:#555;">
+      <span id="footer-es">2025 - Todos los derechos reservados</span>
+      <span id="footer-en" class="hidden">2025 - All rights reserved</span>
+    </p>
+  </footer>
+
+  <a class="fbfab" href="https://www.facebook.com/profile.php?id=61552757540126" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+  </svg>
+</a>
+<a class="wafab" href="https://wa.me/523315562728XXXXXXXX" target="_blank">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var currentLang = 'es';
+  var esIds = ['hero-es','prop-header-es','card1-es','card2-es','spec1-es','spec2-es','price1-es','price2-es','deed1-es','deed2-es','cta1-es','cta2-es','gal-es','galnote-es','why-header-es','why1-es','why2-es','why3-es','why4-es','why5-es','why6-es','contact-header-es','cinfo-es','sendbtn-es','footer-es'];
+  var enIds = ['hero-en','prop-header-en','card1-en','card2-en','spec1-en','spec2-en','price1-en','price2-en','deed1-en','deed2-en','cta1-en','cta2-en','gal-en','galnote-en','why-header-en','why1-en','why2-en','why3-en','why4-en','why5-en','why6-en','contact-header-en','cinfo-en','sendbtn-en','footer-en'];
+
+  function setLang(lang) {
+    currentLang = lang;
+    var show = lang === 'es' ? esIds : enIds;
+    var hide = lang === 'es' ? enIds : esIds;
+    var i, el;
+    for (i = 0; i < show.length; i++) {
+      el = document.getElementById(show[i]);
+      if (el) el.className = el.className.replace(/\bhidden\b/g, '').trim();
+    }
+    for (i = 0; i < hide.length; i++) {
+      el = document.getElementById(hide[i]);
+      if (el && el.className.indexOf('hidden') === -1) el.className += ' hidden';
+    }
+    document.getElementById('btn-es').className = lang === 'es' ? 'lang-btn active' : 'lang-btn';
+    document.getElementById('btn-en').className = lang === 'en' ? 'lang-btn active' : 'lang-btn';
+  }
+
+  document.getElementById('btn-es').addEventListener('click', function() { setLang('es'); });
+  document.getElementById('btn-en').addEventListener('click', function() { setLang('en'); });
+
+  var sendBtn = document.getElementById('send-btn');
+  if (sendBtn) {
+    sendBtn.addEventListener('click', function() {
+      var name = document.getElementById('fname').value || '';
+      var prop = document.getElementById('fprop').value || '';
+      var msg = document.getElementById('fmsg').value || '';
+      var phone = document.getElementById('fphone').value || '';
+      var text = currentLang === 'es'
+        ? 'Hola, soy ' + name + '. Me interesa el terreno en ' + prop + '. ' + msg + ' Tel: ' + phone
+        : 'Hi, I am ' + name + '. Interested in land at ' + prop + '. ' + msg + ' Phone: ' + phone;
+      window.open('https://wa.me/523315562728XXXXXXXX?text=' + encodeURIComponent(text), '_blank');
+    });
+  }
+
+  var ul = navigator.language || navigator.userLanguage || 'es';
+  if (ul.toLowerCase().indexOf('en') === 0) { setLang('en'); }
+});
+</script><script type="text/javascript">
+  //<![CDATA[
+    var currentLang = 'es';
+
+    var esElements = [
+      'hero-es','prop-header-es','card1-es','card2-es',
+      'spec1-es','spec2-es','price1-es','price2-es','deed1-es','deed2-es',
+      'cta1-es','cta2-es','gal-es','galnote-es','why-header-es',
+      'why1-es','why2-es','why3-es','why4-es','why5-es','why6-es',
+      'contact-header-es','cinfo-es','sendbtn-es','footer-es'
+    ];
+    var enElements = [
+      'hero-en','prop-header-en','card1-en','card2-en',
+      'spec1-en','spec2-en','price1-en','price2-en','deed1-en','deed2-en',
+      'cta1-en','cta2-en','gal-en','galnote-en','why-header-en',
+      'why1-en','why2-en','why3-en','why4-en','why5-en','why6-en',
+      'contact-header-en','cinfo-en','sendbtn-en','footer-en'
+    ];
+
+    function setLang(lang) {
+      currentLang = lang;
+      var i, el;
+      if (lang === 'es') {
+        for (i = 0; i < esElements.length; i++) {
+          el = document.getElementById(esElements[i]);
+          if (el) { el.className = el.className.replace(' hidden','').replace('hidden',''); }
+        }
+        for (i = 0; i < enElements.length; i++) {
+          el = document.getElementById(enElements[i]);
+          if (el) {
+            if (el.className.indexOf('hidden') === -1) { el.className += ' hidden'; }
+          }
+        }
+        document.getElementById('btn-es').className = 'lang-btn active';
+        document.getElementById('btn-en').className = 'lang-btn';
+      } else {
+        for (i = 0; i < enElements.length; i++) {
+          el = document.getElementById(enElements[i]);
+          if (el) { el.className = el.className.replace(' hidden','').replace('hidden',''); }
+        }
+        for (i = 0; i < esElements.length; i++) {
+          el = document.getElementById(esElements[i]);
+          if (el) {
+            if (el.className.indexOf('hidden') === -1) { el.className += ' hidden'; }
+          }
+        }
+        document.getElementById('btn-en').className = 'lang-btn active';
+        document.getElementById('btn-es').className = 'lang-btn';
+      }
+    }
+
+    var userLang = navigator.language || navigator.userLanguage || 'es';
+    if (userLang.toLowerCase().indexOf('en') === 0) { setLang('en'); }
+
+    document.addEventListener('click', function(e) {
+      if (e.target &amp;&amp; e.target.tagName === 'A') {
+        var href = e.target.getAttribute('href');
+        if (href &amp;&amp; href.charAt(0) === '#') {
+          e.preventDefault();
+          var target = document.getElementById(href.substring(1));
+          if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        }
+      }
+    });
+
+    function sendForm() {
+      var name  = document.getElementById('fname').value || '';
+      var prop  = document.getElementById('fprop').value || '';
+      var msg   = document.getElementById('fmsg').value || '';
+      var phone = document.getElementById('fphone').value || '';
+      var text;
+      if (currentLang === 'es') {
+        text = 'Hola, soy ' + name + '. Me interesa el terreno en ' + prop + '. '
